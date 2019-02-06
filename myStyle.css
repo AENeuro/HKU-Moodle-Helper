@@ -1,0 +1,19 @@
+.coursebox{
+  position: relative;
+}
+
+.course-of-sem .summary{
+  display: none;
+}
+
+.course-of-sem .teachers{
+  display: none;
+}
+
+.course-of-sem .coursebox{
+  min-height: 0px !important;
+}
+
+.course-of-sem .course-btn{
+  margin-top: 1.5em;
+}

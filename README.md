@@ -1,0 +1,28 @@
+This extension allows HKU students to show your current courses (in a semester) in a separate entry in HKU Moodle. 
+By: Andrew Z
+
+❓How to use?
+1⃣️Click "Add to this semester" on a course
+2⃣️Voilà! You'll see the course on the top of the page. Under "Course of this semester".
+
+🎉Your semester list is synced across devices (any chrome browser that is logged into the same Google account)
+🎉After a semester ends, click "Remove all courses from this semester" to empty the list.
+🎉You can choose to "Remove from this semester" anytime!
+
+
+❓Any suggestions? Or feedbacks? Please do not hesitate to contact me at aeneuro@connect.hku.hk, or WeChat me @AENeuro!!!
+
+❓How to contribute?
+Please create a sparate branch and contribute thanks.
+
+----------------------
+Update 1.1
+FIXED an issue where FBE student page breaks because of a Bloomberg course
+
+Update 1.2
+IMPROVED loading speed of the extension
+ADD delete button on each 'course of this semester'
+ADD not displaying summary and teachers in 'course of this semester'
+
+Update 1.3
+ADD dynamic page updating (no reloading needed!)
