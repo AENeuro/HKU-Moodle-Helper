@@ -7,7 +7,7 @@
   ],
   "content_scripts": [
     {
-      "matches": ["http://moodle.hku.hk/*"],
+      "matches": ["http://moodle.hku.hk/*", "https://moodle.hku.hk/*"],
       "css": ["myStyle.css"],
       "js": ["contentScript.js"],
       "run_at": "document_end"
