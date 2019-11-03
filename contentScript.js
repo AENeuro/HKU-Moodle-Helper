@@ -1,3 +1,5 @@
+// Note: every element that is to be removed during a clearing session 
+// should be marked with a "helper-extension" classname
 mainFunction()
 
 
@@ -22,7 +24,7 @@ function mainFunction(){
 
         // Applies to all courses on the page that is in the list (in "my courses" section)
         courses[i].lastChild.lastChild.insertAdjacentHTML('beforebegin', `
-          <button class="hku-moodle-helper-extension-add-remove-button" id="removeCourse${currentCourseID}" style="width: 250px">
+          <button class="helper-extension helper-remove-button" id="removeCourse${currentCourseID}">
             Remove from this semester
           </button>
         `)
@@ -33,7 +35,7 @@ function mainFunction(){
 
         // Applies to all courses on the page that is not in the list (in "my courses" section)
         courses[i].lastChild.lastChild.insertAdjacentHTML('beforebegin',`
-          <button class="hku-moodle-helper-extension-add-remove-button" id="addCourse${currentCourseID}" style="width: 196.5px">
+          <button class="helper-extension helper-add-button" id="addCourse${currentCourseID}">
             Add to this semester
           </button>
         `)

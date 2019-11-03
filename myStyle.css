@@ -26,8 +26,21 @@ p .btn-primary:hover {
   background-color: #099476 !important;
 }
 
-.hku-moodle-helper-extension-add-remove-button {
+.helper-add-button, .helper-remove-button {
   margin-left: 20px;
   margin-bottom:0px;
   order: 4
+}
+
+.helper-add-button {
+  width: 196.5px;
+}
+
+.helper-remove-button {
+  width: 250px;
+  background-color: rgb(125, 143, 161);
+}
+
+.helper-remove-button:hover {
+  background-color: rgb(106, 121, 134);
 }
