@@ -20,8 +20,9 @@ function mainFunction(){
         //复制element，存入数组
         courseHTML.push(courses[i].cloneNode(true))
 
+        // Applies to all courses on the page that is in the list (in "my courses" section)
         courses[i].lastChild.lastChild.insertAdjacentHTML('beforebegin', `
-          <button class="btn-warning helper-extension" id="removeCourse${currentCourseID}" style="margin-bottom:0px;margin-left:0px;order:4;">
+          <button class="hku-moodle-helper-extension-add-remove-button" id="removeCourse${currentCourseID}" style="width: 250px">
             Remove from this semester
           </button>
         `)
@@ -29,9 +30,10 @@ function mainFunction(){
           removeCourse(e.target.id.slice(12), courseIDs)
         })
       } else {
-        //如果不在列表中
+
+        // Applies to all courses on the page that is not in the list (in "my courses" section)
         courses[i].lastChild.lastChild.insertAdjacentHTML('beforebegin',`
-          <button class="btn-success helper-extension" id="addCourse${currentCourseID}" style="margin-bottom:0px;margin-left:0px;order:4;">
+          <button class="hku-moodle-helper-extension-add-remove-button" id="addCourse${currentCourseID}" style="width: 196.5px">
             Add to this semester
           </button>
         `)
@@ -79,6 +81,7 @@ function mainFunction(){
         courseHTML[i].className = "coursebox clearfix odd"
       }
 
+      // applies to all courses in this semester (in "course of this semester" section)
       currentCourseID = courseHTML[i].dataset.courseid
       courseHTML[i].insertAdjacentHTML('afterbegin', `
         <a id="removeCourseA${currentCourseID}" style="position: absolute; top: 5px; right: 5px; font-size: 25px; color: darkgrey; cursor: pointer">

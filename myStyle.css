@@ -17,3 +17,17 @@
 .course-of-sem .course-btn{
   margin-top: 1.5em;
 }
+
+.course-btn {
+  margin-left: 20px
+}
+
+p .btn-primary:hover {
+  background-color: #099476 !important;
+}
+
+.hku-moodle-helper-extension-add-remove-button {
+  margin-left: 20px;
+  margin-bottom:0px;
+  order: 4
+}
