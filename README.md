@@ -26,3 +26,9 @@ ADD not displaying summary and teachers in 'course of this semester'
 
 Update 1.3
 ADD dynamic page updating (no reloading needed!)
+
+Update 1.3.1
+Support HTTPS
+
+Update 1.4
+Better UI improvement of the vanilla page
