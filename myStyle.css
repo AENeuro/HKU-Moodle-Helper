@@ -2,6 +2,13 @@
   position: relative;
 }
 
+/* =================== */
+/* For course-of-sem formatting */
+
+.course-of-sem{
+  margin-bottom: 50px;
+}
+
 .course-of-sem .summary{
   display: none;
 }
@@ -22,9 +29,14 @@
   margin-left: 20px
 }
 
+/* Changing "click to enter this course" hover color*/
+/* Need a p tag in front to override the original important */
 p .btn-primary:hover {
   background-color: #099476 !important;
 }
+
+/* ===================== */
+/* Add and Remove Button for "My courses" */
 
 .helper-add-button, .helper-remove-button {
   margin-left: 20px;
@@ -43,4 +55,23 @@ p .btn-primary:hover {
 
 .helper-remove-button:hover {
   background-color: rgb(106, 121, 134);
+}
+
+/* =================== */
+/* Searchbox formatting */
+
+.my-courses-title {
+  display: inline-block;
+}
+
+#helper-search {
+  margin-left: 20px;
+}
+
+.helper-search-hide {
+  display: none !important;
+}
+
+.helper-search-show {
+  display: revert !important;
 }

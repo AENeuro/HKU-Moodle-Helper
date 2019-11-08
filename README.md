@@ -32,3 +32,6 @@ Support HTTPS
 
 Update 1.4
 Better UI improvement of the vanilla page
+
+Update 1.5
+ADD a brand new search bar

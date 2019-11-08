@@ -1,9 +1,9 @@
 // Note: every element that is to be removed during a clearing session 
 // should be marked with a "helper-extension" classname
+// Otherwise it should be marked with "helper-extension-persistent"
 mainFunction()
 
-
-function mainFunction(){
+function mainFunction() {
   courseIDs = new Array()
   courseHTML = new Array()
   chrome.storage.sync.get({'courseIDs': []}, function(result) {
@@ -54,7 +54,7 @@ function mainFunction(){
         <div class="helper-extension">
           <h2>Course of this semester</h2>
           <button class="btn-default" id ="removeAll">Remove all courses from this semester</button>
-          <div id="courseOfSem" class="courses frontpage-course-list-enrolled has-pre has-post course-of-sem"></div>
+          <div id="courseOfSem" class="courses course-of-sem"></div>
         </div>
       `)
 
@@ -98,8 +98,10 @@ function mainFunction(){
   });
 }
 
+// ======================================
+// Helper functions
 
-function clearAll (){
+function clearAll() {
   var clearElements = document.getElementsByClassName("helper-extension")
   //必须倒序删除，因为HTMLCollection会因为remove方法动态变化
   for (var i = clearElements.length - 1; i >= 0; --i) {
@@ -107,7 +109,7 @@ function clearAll (){
   }
 }
 
-function addCourse (courseCode, courseIDs){
+function addCourse(courseCode, courseIDs) {
   if (courseIDs && courseIDs.length){
     courseIDs.push(courseCode)
   }else{
@@ -118,7 +120,7 @@ function addCourse (courseCode, courseIDs){
   });
 }
 
-function removeCourse (courseCode, courseIDs){
+function removeCourse(courseCode, courseIDs) {
   courseIDs = courseIDs.filter(function(value, index, arr){
     return value !== courseCode;
   });
@@ -127,7 +129,7 @@ function removeCourse (courseCode, courseIDs){
   });
 }
 
-function removeAll (){
+function removeAll() {
   chrome.storage.sync.set({courseIDs: null}, function() {
     mainFunction()
   });
