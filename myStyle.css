@@ -2,6 +2,40 @@
   position: relative;
 }
 
+/* =================== */
+/* For course-of-sem formatting */
+
+.helper-extension h2 {
+  font-size: 2.46rem;
+  line-height: 3.08rem;
+  background: url(/theme/image.php/hkumoodle/theme/1598314349/bg/block-divider) left bottom repeat-x scroll;
+  margin: 30px 0px 40px !important;
+  vertical-align: middle;  /* for button */
+}
+
+.helper-extension h2::after {
+  background: #00b48d none repeat scroll 0 0;
+  content: "";
+  display: block;
+  height: 3px;
+  margin-top: 15px;
+  max-width: 75px;
+  padding: 0;
+  width: 50%
+}
+
+.helper-extension #removeAll {
+  float: right;
+  
+  color: #AAAAAA;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.course-of-sem{
+  margin-bottom: 50px;
+}
+
 .course-of-sem .summary{
   display: none;
 }
@@ -22,9 +56,14 @@
   margin-left: 20px
 }
 
+/* Changing "click to enter this course" hover color*/
+/* Need a p tag in front to override the original important */
 p .btn-primary:hover {
   background-color: #099476 !important;
 }
+
+/* ===================== */
+/* Add and Remove Button for "My courses" */
 
 .helper-add-button, .helper-remove-button {
   margin-left: 20px;
