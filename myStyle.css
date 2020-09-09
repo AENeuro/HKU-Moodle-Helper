@@ -2,10 +2,22 @@
   position: relative;
 }
 
+.helper-hidden {
+  display: none;
+}
+
+.helper-shown {
+  display: block;
+}
+
 /* =================== */
 /* For course-of-sem formatting */
 
-.helper-extension h2 {
+.course-of-sem-wrapper{
+  margin-bottom: 50px;
+}
+
+.course-of-sem-wrapper h2 {
   font-size: 2.46rem;
   line-height: 3.08rem;
   background: url(/theme/image.php/hkumoodle/theme/1598314349/bg/block-divider) left bottom repeat-x scroll;
@@ -13,7 +25,7 @@
   vertical-align: middle;  /* for button */
 }
 
-.helper-extension h2::after {
+.course-of-sem-wrapper h2::after {
   background: #00b48d none repeat scroll 0 0;
   content: "";
   display: block;
@@ -24,16 +36,12 @@
   width: 50%
 }
 
-.helper-extension #removeAll {
+.course-of-sem-wrapper #removeAll {
   float: right;
   
   color: #AAAAAA;
   font-weight: normal;
   cursor: pointer;
-}
-
-.course-of-sem{
-  margin-bottom: 50px;
 }
 
 .course-of-sem .summary{
@@ -82,4 +90,23 @@ p .btn-primary:hover {
 
 .helper-remove-button:hover {
   background-color: rgb(106, 121, 134);
+}
+
+/* ============================= */
+/* feedback button */
+
+.helper-feedback {
+  margin-top: 12px;
+  width: 100%;
+  text-align: right;
+}
+
+#helperFeedbackButton {
+  color: #AAAAAA;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#helperFeedbackInput {
+  margin-bottom: 6px;
 }

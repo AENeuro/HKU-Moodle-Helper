@@ -7,6 +7,7 @@ mainFunction()
 
 async function mainFunction() {
   await addCourseOfSem()
+  globalThis.addFeedbackBox()
 }
 
 async function addCourseOfSem() {
@@ -53,7 +54,7 @@ async function addCourseOfSem() {
   if (courseIDs && courseIDs.length){
     //如果有课程
     outerContainer.insertAdjacentHTML('afterbegin', `
-      <div class="helper-extension">
+      <div class="helper-extension course-of-sem-wrapper">
         <h2>
           Course of this semester
           <div id="removeAll">×</button>
@@ -70,7 +71,7 @@ async function addCourseOfSem() {
   } else {
     //没有课程
     outerContainer.insertAdjacentHTML('afterbegin', `
-      <div class="helper-extension">
+      <div class="helper-extension course-of-sem-wrapper">
         <h2>Course of this semester</h2>
         <p><i>Please click 'Add to this semester' on a course to bring it here.</i></p>
       </div>
