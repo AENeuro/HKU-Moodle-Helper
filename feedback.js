@@ -1,16 +1,23 @@
 globalThis.addFeedbackBox = function() {
   function showTextArea() {
     document.getElementById("helperFeedbackForm").classList.add("helper-shown")
+    document.getElementById("helperFeedbackButton").insertAdjacentHTML("beforebegin", `
+      <p id="helperFeedbackButton2" style="color: #AAAAAA;">You can also submit an issue or PR on 
+        <a href="https://github.com/AENeuro/HKU-Moodle-Helper" target="_blank">
+          <span style="color: #AAAAAA;"><u>Github</u></span>
+        </a>
+      </p>
+    `)
+    document.getElementById("helperFeedbackButton").remove()
   }
   
   async function sendFeedback() {
+    document.getElementById("helperFeedbackSend").disabled = true
     try{
       await request({
-        url: "https://google.com",
+        url: "	https://j8n6ydl8hd.execute-api.ap-southeast-1.amazonaws.com/create",
         method: "POST",
-        body: {
-          message: document.getElementById("helperFeedbackInput").value
-        }
+        body: document.getElementById("helperFeedbackInput").value
       })
     } catch(e) {
       alert("Network error")
@@ -19,7 +26,7 @@ globalThis.addFeedbackBox = function() {
     document.getElementById("helperFeedbackForm").insertAdjacentHTML("beforebegin", `
       <p style="color: #AAAAAA">Thank you for your feedback!</p>
     `)
-    document.getElementById("helperFeedbackButton").remove()
+    document.getElementById("helperFeedbackButton2").remove()
   }
 
   document.getElementsByClassName("course-of-sem-wrapper")[0].insertAdjacentHTML("beforeend",`
@@ -53,6 +60,6 @@ const request = obj => {
           }
       };
       xhr.onerror = () => reject(xhr.statusText);
-      xhr.send(obj.body);
+      xhr.send(JSON.stringify(obj.body));
   });
 };
