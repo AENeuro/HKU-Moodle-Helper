@@ -1,6 +1,23 @@
+/* =================== */
+/* formatting optimization */
+
 .coursebox{
-  position: relative;
+  background: #FFFFFF;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
+  border-radius: 8px !important;
+
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+
+  transition: box-shadow ease-in 0.2s;
 }
+
+.coursebox:hover{
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.20);
+}
+
+/* =================== */
+/* Helper universal */
 
 .helper-hidden {
   display: none;
@@ -42,14 +59,6 @@
   color: #AAAAAA;
   font-weight: normal;
   cursor: pointer;
-}
-
-.course-of-sem .summary{
-  display: none;
-}
-
-.course-of-sem .teachers{
-  display: none;
 }
 
 .course-of-sem .coursebox{

@@ -1,6 +1,6 @@
 globalThis.addMessageBox = function () {
   const messageBox = `
-    <section class=" block_html block  card mb-3" role="complementary" data-block="html" aria-labelledby="instance-330654-header">
+    <section class="helper-extension block_html block  card mb-3" role="complementary" data-block="html" aria-labelledby="instance-330654-header">
       <div class="card-body p-3">
         <h5 class="card-title d-inline">Message from HKU Moodle Helper</h5>
         <div class="card-text content mt-3">

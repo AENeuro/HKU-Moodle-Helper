@@ -65,7 +65,7 @@ async function addCourseOfSem() {
     `)
 
     document.getElementById("removeAll").addEventListener("click", function(){
-      if (confirm("Sure you wanna remove all courses from this semester?")){
+      if (confirm("Do you wish to remove all courses from this semester?")){
         removeAll()
       }
     })
