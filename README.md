@@ -36,3 +36,9 @@ Better UI improvement of the vanilla page
 
 Update 1.4.1
 Style fix, clean up code
+
+Update 1.4.2
+Add feedback button
+
+Update 1.4.3
+Disable functionalities for now, for fear of page breaking
