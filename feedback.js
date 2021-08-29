@@ -29,8 +29,13 @@ globalThis.addFeedbackBox = function() {
     document.getElementById("helperFeedbackButton2").remove()
   }
 
+
+  // initialization
+
+  var version = chrome.runtime.getManifest().version
   document.getElementsByClassName("course-of-sem-wrapper")[0].insertAdjacentHTML("beforeend",`
     <div class="helper-feedback">
+      <p>Powered by HKU Moodle Helper ver. ${version}</p>
       <p id="helperFeedbackButton">Feedback</p>
       <div id="helperFeedbackForm" class="helper-hidden">
         <input id="helperFeedbackInput" type="text"/><br/>

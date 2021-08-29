@@ -108,17 +108,27 @@ p .btn-primary:hover {
 /* feedback button */
 
 .helper-feedback {
+  color: #AAAAAA;
   margin-top: 12px;
   width: 100%;
   text-align: right;
 }
 
+.helper-feedback p {
+  margin-bottom: 0;
+}
+
 #helperFeedbackButton {
-  color: #AAAAAA;
   text-decoration: underline;
   cursor: pointer;
 }
 
 #helperFeedbackInput {
   margin-bottom: 6px;
+}
+
+/* Message box */
+.helper-message-box .card-title::before {
+  background-color: #00b48d !important;
+  content: "\f1c9" !important
 }
