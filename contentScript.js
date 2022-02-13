@@ -7,6 +7,7 @@ mainFunction()
 
 async function mainFunction() {
   await addCourseOfSem()
+  await globalThis.addQRCode()
   globalThis.addFeedbackBox()
   globalThis.addMessageBox()
 }

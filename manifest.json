@@ -9,7 +9,7 @@
     {
       "matches": ["http://moodle.hku.hk/*", "https://moodle.hku.hk/*"],
       "css": ["myStyle.css"],
-      "js": ["browser-polyfill.js", "feedback.js", "messageBox.js", "contentScript.js"],
+      "js": ["browser-polyfill.js", "feedback.js", "messageBox.js", "QRCode.js", "contentScript.js"],
       "run_at": "document_end"
     }
   ],
