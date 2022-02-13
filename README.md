@@ -42,3 +42,6 @@ Add feedback button
 
 Update 1.4.3
 Disable functionalities for now, for fear of page breaking
+
+Update 1.4.6
+Add support for mainland moodle site (thank you Masane)

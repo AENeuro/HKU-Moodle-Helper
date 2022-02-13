@@ -1,13 +1,13 @@
 {
   "name": "HKU Moodle Helper",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "description": "This extension allows HKU students to show your current courses (in a semester) in a separate entry in HKU Moodle. By: Andrew Z",
   "permissions": [
     "storage"
   ],
   "content_scripts": [
     {
-      "matches": ["http://moodle.hku.hk/*", "https://moodle.hku.hk/*"],
+      "matches": ["http://moodle.hku.hk/*", "https://moodle.hku.hk/*", "http://121.37.222.164:8091/*", "https://121.37.222.164:8091/*"],
       "css": ["myStyle.css"],
       "js": ["browser-polyfill.js", "feedback.js", "messageBox.js", "contentScript.js"],
       "run_at": "document_end"
