@@ -8,7 +8,7 @@ mainFunction()
 async function mainFunction() {
   await addCourseOfSem()
   globalThis.addFeedbackBox()
-  globalThis.addMessageBox()
+  // globalThis.addMessageBox()
 }
 
 async function addCourseOfSem() {
