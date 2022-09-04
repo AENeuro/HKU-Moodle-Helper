@@ -124,6 +124,7 @@ p .btn-primary:hover {
 }
 
 #helperFeedbackInput {
+  margin-top: 6px;
   margin-bottom: 6px;
 }
 

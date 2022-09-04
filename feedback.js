@@ -2,16 +2,25 @@ globalThis.addFeedbackBox = function() {
   function showTextArea() {
     document.getElementById("helperFeedbackForm").classList.add("helper-shown")
     document.getElementById("helperFeedbackButton").insertAdjacentHTML("beforebegin", `
-      <p id="helperFeedbackButton2" style="color: #AAAAAA;">You can also submit an issue or PR on 
-        <a href="https://github.com/AENeuro/HKU-Moodle-Helper" target="_blank">
-          <span style="color: #AAAAAA;"><u>Github</u></span>
-        </a>
-      </p>
+      <div>
+        <p id="helperFeedbackButton2" style="color: #AAAAAA;">Check the 
+          <a href="https://github.com/AENeuro/HKU-Moodle-Helper" target="_blank">
+            <span style="color: #AAAAAA;"><u>FAQ</u></span>
+          </a>
+        or submit an issue or PR on 
+          <a href="https://github.com/AENeuro/HKU-Moodle-Helper" target="_blank">
+            <span style="color: #AAAAAA;"><u>Github</u></span>
+          </a>
+        </p>
+      </div>
     `)
     document.getElementById("helperFeedbackButton").remove()
   }
   
   async function sendFeedback() {
+    if (!document.getElementById("helperFeedbackInput").value) {
+      return 0
+    }
     document.getElementById("helperFeedbackSend").disabled = true
     try{
       await request({
@@ -38,7 +47,7 @@ globalThis.addFeedbackBox = function() {
       <p>Powered by HKU Moodle Helper ver. ${version}</p>
       <p id="helperFeedbackButton">Feedback</p>
       <div id="helperFeedbackForm" class="helper-hidden">
-        <input id="helperFeedbackInput" type="text"/><br/>
+        <input id="helperFeedbackInput" type="text" placeholder="Email [Optional] + issue"/><br/>
         <button id="helperFeedbackSend">Send</button>
       </div>
     </div>
