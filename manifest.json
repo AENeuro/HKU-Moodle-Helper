@@ -1,6 +1,6 @@
 {
   "name": "HKU Moodle Helper",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "description": "This extension allows HKU students to show your current courses (in a semester) in a separate entry in HKU Moodle. By: Andrew Z",
   "permissions": [
     "storage"
@@ -19,5 +19,5 @@
     "48": "images/48.png",
     "128": "images/128.png"
   },
-  "manifest_version": 2
+  "manifest_version": 3
 }
