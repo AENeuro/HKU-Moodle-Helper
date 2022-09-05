@@ -19,7 +19,7 @@ By: Andrew Z
 
 **2. I can't pin a course that I manually found by searching the course code.**
 
-* Unfortunately that's not feasible. This application pins what was already on your Moodle home page - it cannot do that if isn't anything to pin in the first place.
+* Unfortunately that's not feasible. This application pins what was already on your Moodle home page - it cannot do that if there isn't anything to pin in the first place.
 
 **3. Is my information safe?**
 
@@ -29,7 +29,8 @@ By: Andrew Z
 
 * Submit a feedback. Open an issue. Better yet, make a PR.
 
-----------------------
+# ⚙️ Update Log
+
 **⚙️ Update 1.1**
 FIXED an issue where FBE student page breaks because of a Bloomberg course
 
