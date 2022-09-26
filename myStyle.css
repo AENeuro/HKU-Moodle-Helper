@@ -133,3 +133,13 @@ p .btn-primary:hover {
   background-color: #00b48d !important;
   content: "\f1c9" !important
 }
+
+.helper-sidebar-button{
+  margin:0 0 0 6px;
+  padding: 0 6px
+}
+
+.helper-sidebar-wrapper{
+  display: inline-block;
+  justify-content: space-between;
+}
