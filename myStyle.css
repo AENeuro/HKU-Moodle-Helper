@@ -171,7 +171,7 @@ p .btn-primary:hover {
   box-shadow: 0;
   color: rgb(125, 143, 161) !important;
   border: 2px solid rgb(125, 143, 161) !important;
-  border-radius: 3px;
+  border-radius: 12px;
   background-color: transparent !important;
 }
 

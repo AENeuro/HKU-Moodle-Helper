@@ -47,7 +47,7 @@ async function addCourseOfSem() {
       courses[i].lastChild.lastChild.insertAdjacentHTML(
         "beforebegin",
         `
-        <button class="helper-extension helper-add-button" id="addCourse${currentCourseID}">
+        <button class="helper-extension helper-add-button" id="addCourse${currentCourseID}" >
           Add to this semester
         </button>
       `
@@ -77,7 +77,7 @@ async function addCourseOfSem() {
       `<div class="helper-extension helper-sidebar-wrapper">
           <div class="helper-extension helper-sidebar-button-${
             included ? "minus" : "plus"
-          }" id="sidebarbtn${id}" >${included ? "×" : "+"}</div>
+          }" id="sidebarbtn${id}" title='${included ? 'remove from' : 'add to'} this semester' >${included ? "×" : "+"}</div>
         </div>`
     );
     sidebarlist[i].removeChild(anchor);
