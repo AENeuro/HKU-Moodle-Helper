@@ -1,12 +1,12 @@
 /* =================== */
 /* formatting optimization */
 
-.coursebox{
-  position: relative; 
+.coursebox {
+  position: relative;
   /* This line keeps the delete button for courses visible */
 
   background: #FFFFFF;
-  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.20);
   border-radius: 8px !important;
 
   padding-left: 20px !important;
@@ -15,8 +15,8 @@
   transition: box-shadow ease-in 0.2s;
 }
 
-.coursebox:hover{
-  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.20);
+.coursebox:hover {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.20);
 }
 
 /* =================== */
@@ -33,7 +33,7 @@
 /* =================== */
 /* For course-of-sem formatting */
 
-.course-of-sem-wrapper{
+.course-of-sem-wrapper {
   margin-bottom: 50px;
 }
 
@@ -42,7 +42,8 @@
   line-height: 3.08rem;
   background: url(/theme/image.php/hkumoodle/theme/1598314349/bg/block-divider) left bottom repeat-x scroll;
   margin: 30px 0px 40px !important;
-  vertical-align: middle;  /* for button */
+  vertical-align: middle;
+  /* for button */
 }
 
 .course-of-sem-wrapper h2::after {
@@ -58,17 +59,17 @@
 
 .course-of-sem-wrapper #removeAll {
   float: right;
-  
+
   color: #AAAAAA;
   font-weight: normal;
   cursor: pointer;
 }
 
-.course-of-sem .coursebox{
+.course-of-sem .coursebox {
   min-height: 0px !important;
 }
 
-.course-of-sem .course-btn{
+.course-of-sem .course-btn {
   margin-top: 1.5em;
 }
 
@@ -85,9 +86,10 @@ p .btn-primary:hover {
 /* ===================== */
 /* Add and Remove Button for "My courses" */
 
-.helper-add-button, .helper-remove-button {
+.helper-add-button,
+.helper-remove-button {
   margin-left: 20px;
-  margin-bottom:0px;
+  margin-bottom: 0px;
   order: 4
 }
 
@@ -134,12 +136,52 @@ p .btn-primary:hover {
   content: "\f1c9" !important
 }
 
-.helper-sidebar-button{
-  margin:0 0 0 6px;
-  padding: 0 6px
+.helper-sidebar-button-plus {
+  width: 13px;
+  height: 13px;
+  line-height: 13px;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 0 0 6px;
+  box-shadow: 0;
+  color: #00b48d;
+  font-weight: bold;
+  border: 2px solid #00b48d;
+  border-radius: 12px;
+  background-color: transparent;
 }
 
-.helper-sidebar-wrapper{
+.helper-sidebar-button-plus:hover {
+  border-color: #09886c;
+  color: #09886c;
+  background-color: transparent;
+
+}
+
+
+
+.helper-sidebar-button-minus {
+  width: 13px;
+  height: 13px;
+  line-height: 13px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 0 0 6px;
+  box-shadow: 0;
+  color: rgb(125, 143, 161) !important;
+  border: 2px solid rgb(125, 143, 161) !important;
+  border-radius: 3px;
+  background-color: transparent !important;
+}
+
+.helper-sidebar-button-minus:hover {
+  border-color: rgb(106, 121, 134) !important;
+  color: rgb(106, 121, 134) !important;
+  background-color: transparent !important;
+
+}
+
+.helper-sidebar-wrapper {
   display: inline-block;
-  justify-content: space-between;
 }

@@ -75,9 +75,9 @@ async function addCourseOfSem() {
     sidebarlist[i].firstChild.insertAdjacentHTML(
       "afterEnd",
       `<div class="helper-extension helper-sidebar-wrapper">
-          <button class="helper-extension helper-sidebar-button" id="sidebarbtn${id}" >${
-        included ? "-" : "+"
-      }</button>
+          <div class="helper-extension helper-sidebar-button-${
+            included ? "minus" : "plus"
+          }" id="sidebarbtn${id}" >${included ? "×" : "+"}</div>
         </div>`
     );
     sidebarlist[i].removeChild(anchor);
