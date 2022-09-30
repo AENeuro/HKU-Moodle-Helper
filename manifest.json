@@ -9,7 +9,7 @@
     {
       "matches": ["http://moodle.hku.hk/*", "https://moodle.hku.hk/*", "http://121.37.222.164:8091/*", "https://121.37.222.164:8091/*"],
       "css": ["myStyle.css"],
-      "js": ["browser-polyfill.js", "feedback.js", "messageBox.js", "contentScript.js"],
+      "js": ["browser-polyfill.js", "feedback.js", "messageBox.js", "contentScript.js", "globalMessage.js"],
       "run_at": "document_end"
     }
   ],

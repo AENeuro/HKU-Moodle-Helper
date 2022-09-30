@@ -56,7 +56,6 @@ globalThis.addFeedbackBox = function() {
   document.getElementById("helperFeedbackSend").addEventListener("click", sendFeedback)
 }
 
-
 const request = obj => {
   return new Promise((resolve, reject) => {
       let xhr = new XMLHttpRequest();
