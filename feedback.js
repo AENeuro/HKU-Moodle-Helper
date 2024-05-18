@@ -22,11 +22,16 @@ globalThis.addFeedbackBox = function() {
       return 0
     }
     document.getElementById("helperFeedbackSend").disabled = true
+    const content = document.getElementById("helperFeedbackInput").value || "";
+    const data = {
+      time: new Date().toISOString(),
+      content: content
+    };
     try{
       await request({
-        url: "	https://j8n6ydl8hd.execute-api.ap-southeast-1.amazonaws.com/create",
+        url: "	https://feedback.richku.com/feedback.php",
         method: "POST",
-        body: document.getElementById("helperFeedbackInput").value
+        body: data,
       })
     } catch(e) {
       alert("Network error")
