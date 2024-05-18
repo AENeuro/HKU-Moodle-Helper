@@ -1,4 +1,7 @@
 globalThis.addMessageBox = function () {
+  if (document.querySelector(".helper-message-box")) {
+    return;
+  }
   const messageBox = `
     <section class="helper-extension-persistent helper-message-box block_html block card mb-3" role="complementary" data-block="html" aria-labelledby="instance-330654-header">
       <div class="card-body p-3">
@@ -23,5 +26,10 @@ globalThis.addMessageBox = function () {
     </section>
   `
 
-  document.getElementById("block-region-side-post").firstChild.insertAdjacentHTML("beforebegin", messageBox)
+  const targetElement = document.getElementById("block-region-side-post");
+  if (targetElement && targetElement.firstElementChild) {
+    targetElement.firstElementChild.insertAdjacentHTML("beforebegin", messageBox);
+  } else if (targetElement) {
+    targetElement.insertAdjacentHTML("afterbegin", messageBox);
+  }
 }

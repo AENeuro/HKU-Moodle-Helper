@@ -2,14 +2,29 @@
 // should be marked with a "helper-extension" classname
 // Otherwise it should be marked with "helper-extension-persistent"
 
-// Code splitting was done through globalThis (which was confined within ContentScript. Thus no pollutions were made)
+const FONT_AWESOME_CSS = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+const COURSE_VIEW_PATH = "/course/view.php";
+const COURSE_SEARCH_PATH = "/course/search.php";
+const MOODLE_HKU_HOMEPAGE = "https://moodle.hku.hk/";
+
 mainFunction();
 
 async function mainFunction() {
-  addCssByLink("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+  initializePage();
+}
+
+async function initializePage() {
+  await addCssByLink(FONT_AWESOME_CSS);
+  
+  if(window.location.pathname === COURSE_VIEW_PATH) { 
+    return;
+  }
+  
   await addCourseOfSem();
-  globalThis.addFeedbackBox();
-  globalThis.addMessageBox();
+  if (window.location.href == MOODLE_HKU_HOMEPAGE) {
+    globalThis.addFeedbackBox();
+    globalThis.addMessageBox();
+  }
 }
 
 async function addCourseOfSem() {
@@ -35,7 +50,7 @@ async function addCourseOfSem() {
     if (included) {
       //如果在列表中
       //复制element，存入数组
-      if (pagePath != "/course/search.php") {
+      if (pagePath != COURSE_SEARCH_PATH) {
         courseElements.push({
           courseID: currentCourseID,
           courseHTML: courses[i].cloneNode(true),
@@ -70,7 +85,7 @@ async function addCourseOfSem() {
         .getElementById("addCourse" + currentCourseID)
         .addEventListener("click", function (e) {
           courseInfo = extractInfo(LocateCourse(currentCourseID, courses));
-          if (pagePath == "/course/search.php")
+          if (pagePath == COURSE_SEARCH_PATH)
             addCourse(pagePath, e.target.id.slice(9), courseList, courseInfo);
           else addCourse(pagePath, e.target.id.slice(9), courseList);
         });
@@ -116,13 +131,16 @@ async function addCourseOfSem() {
       document
         .getElementById("sidebarbtn" + id)
         .addEventListener("click", function (e) {
-          addCourse("/course/search.php", e.target.id.slice(10), courseList, {
+          addCourse(COURSE_SEARCH_PATH, e.target.id.slice(10), courseList, {
             title: text.innerText,
             teachers: "",
           });
         });
     }
   }
+
+  // if the current page is NOT the homepage, stop executing the following homepage-related code
+  if(window.location.href != MOODLE_HKU_HOMEPAGE) { return; }
 
   var outerContainer = document.getElementById("frontpage-course-list");
 
@@ -158,7 +176,7 @@ async function addCourseOfSem() {
     `
     );
   }
-
+  if(!courseList) { return; }
   var innerContainer = document.getElementById("courseOfSem");
   for (var i = 0; i < courseList.length; i++) {
     /* if (i % 2) {
@@ -299,7 +317,7 @@ function extractInfo(courseElement) {
 }
 
 async function addCourse(pageURL, courseID, courseList, courseInfo = {}) {
-  if (pageURL == "/course/search.php") {
+  if (pageURL == COURSE_SEARCH_PATH) {
     if (courseList && courseList.length) {
       courseList.push({ courseID: courseID, courseInfo: courseInfo });
     } else {
