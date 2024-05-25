@@ -7,6 +7,8 @@ By: Andrew Z
 1. Click "Add to this semester" on a course
 2. Voilà! You'll see the course on the top of the page. Under "Course of this semester".
 
+🎉Moodle Helper now allows users to add any course they search for to the "Course of this semester" list. This means you can add courses from search results by course code, not just those listed on the homepage!
+
 🎉Your semester list is synced across devices (any desktop chrome browser that is logged into the same Google account)
 
 🎉After a semester ends, empty the list with one click.
@@ -58,4 +60,4 @@ Add feedback button
 Disable functionalities for now, for fear of page breaking
 
 **⚙️ Update 1.4.6**
-Add support for mainland moodle site (thank you Masane)
+Add support for mainland Moodle site (thank you Masane)
