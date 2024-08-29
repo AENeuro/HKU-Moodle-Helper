@@ -25,14 +25,19 @@ globalThis.globalMessage = function (content, duration, type) {
         </div>
     </div>
         `;
-  document.querySelector("#wrapper").insertAdjacentHTML("afterbegin", html);
-  const message = document.querySelectorAll("div.message-item")[0];
-  document
-        .getElementById("removeMessage")
-        .addEventListener("click", function () {
-          message.classList.add("fade-out")
-          message.addEventListener("animationend", function(){
-            document.querySelector("#wrapper > div.overlay").remove()
-        })
-        });
+
+    const wrapperElement = document.querySelector("#page-wrapper-outer");
+    console.log(wrapperElement.target)
+    if (wrapperElement) {
+      wrapperElement.insertAdjacentHTML('afterbegin', html);
+    }
+    const message = document.querySelectorAll("div.message-item")[0];
+    document
+      .getElementById("removeMessage")
+      .addEventListener("click", function () {
+        message.classList.add("fade-out")
+        message.addEventListener("animationend", function(){
+          document.querySelector("#page-wrapper-outer > div.overlay").remove()
+      })
+      });
 };

@@ -6,9 +6,9 @@
   /* This line keeps the delete button for courses visible */
 
   background: #ffffff;
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
-    0 2px 4px -1px rgba(0, 0, 0, 0.2);
-  border-radius: 8px !important;
+  /*box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),*/
+  /*  0 2px 4px -1px rgba(0, 0, 0, 0.2);*/
+  /*border-radius: 8px !important;*/
 
   padding-left: 20px !important;
   padding-right: 20px !important;
@@ -17,8 +17,8 @@
 }
 
 .coursebox:hover {
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12),
-    0 3px 5px -1px rgba(0, 0, 0, 0.2);
+  /*box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12),*/
+  /*  0 3px 5px -1px rgba(0, 0, 0, 0.2);*/
 }
 
 /* =================== */
@@ -77,11 +77,15 @@
 }
 
 .course-btn {
-  margin-left: 20px;
+  /*margin-left: 20px;*/
 }
 
 /* Changing "click to enter this course" hover color*/
 /* Need a p tag in front to override the original important */
+.btn.btn-primary{
+  margin-top: 0.2em !important;
+}
+
 p .btn-primary:hover {
   background-color: #099476 !important;
 }
@@ -91,22 +95,32 @@ p .btn-primary:hover {
 
 .helper-add-button,
 .helper-remove-button {
-  margin-left: 20px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16);
+  margin-left: 6px;
   margin-bottom: 0px;
   order: 4;
+  border: none;
+  width: 222.5px;
 }
 
 .helper-add-button {
-  width: 196.5px;
+  background-color: #9AC555 !important;
+  box-shadow: none;
+}
+
+.helper-add-button:hover {
+  background-color: #7a9f4b !important;
+  box-shadow: none;
 }
 
 .helper-remove-button {
-  width: 250px;
-  background-color: rgb(125, 143, 161);
+  background-color: rgb(125, 143, 161)!important;
+  padding-left: 0.1em !important;
+  padding-right: 0.1em !important;
 }
 
 .helper-remove-button:hover {
-  background-color: rgb(106, 121, 134);
+  background-color: rgb(89, 100, 113)!important;
 }
 
 /* ============================= */
@@ -251,7 +265,7 @@ p .btn-primary:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1000;
+  z-index: 10000;
 }
 
 .message-list {
