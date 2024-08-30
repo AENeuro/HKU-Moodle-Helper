@@ -34,7 +34,7 @@ async function addCourseOfSem() {
   var courses = document.getElementsByClassName("coursebox");
   pagePath = window.location.pathname;
   if (version == 1){
-    globalThis.globalMessage("This is HKU Moodle Helper Ver. 1.4.7 !  You may now add courses from search page and the sidebar! ", 10000, 'info');
+    globalThis.globalMessage("This is HKU Moodle Helper Ver. 1.4.8 !  Now supports the updated Moodle; you may also add courses from search page!", 10000, 'info');
     await browser.storage.sync.set({version: 2})
   }
   for (var i = 0; i < courses.length; i++) {

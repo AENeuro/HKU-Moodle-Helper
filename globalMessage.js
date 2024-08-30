@@ -27,7 +27,6 @@ globalThis.globalMessage = function (content, duration, type) {
         `;
 
     const wrapperElement = document.querySelector("#page-wrapper-outer");
-    console.log(wrapperElement.target)
     if (wrapperElement) {
       wrapperElement.insertAdjacentHTML('afterbegin', html);
     }
