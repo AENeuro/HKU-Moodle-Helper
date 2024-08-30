@@ -61,3 +61,6 @@ Disable functionalities for now, for fear of page breaking
 
 **⚙️ Update 1.4.6**
 Add support for mainland Moodle site (thank you Masane)
+
+**⚙️ Update 1.4.8**
+Fixed to support the update Moodle (23 JUL 2024), adjustment of styling to match the new Moodle UI.

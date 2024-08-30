@@ -34,7 +34,7 @@ async function addCourseOfSem() {
   var courses = document.getElementsByClassName("coursebox");
   pagePath = window.location.pathname;
   if (version == 1){
-    globalThis.globalMessage("This is HKU Moodle Helper Ver. 1.4.7 !  You may now add courses from search page and the sidebar! ", 10000, 'info');
+    globalThis.globalMessage("This is HKU Moodle Helper Ver. 1.4.8 !  Now supports the updated Moodle; you may also add courses from search page!", 10000, 'info');
     await browser.storage.sync.set({version: 2})
   }
   for (var i = 0; i < courses.length; i++) {
@@ -59,9 +59,9 @@ async function addCourseOfSem() {
 
       // Applies to all courses on the page that is in the list (in "my courses" section)
       courses[i].lastChild.lastChild.insertAdjacentHTML(
-        "beforebegin",
+        "afterbegin",
         `
-        <button class="helper-extension helper-remove-button" id="removeCourse${currentCourseID}">
+        <button class="btn btn-secondary helper-extension helper-remove-button" id="removeCourse${currentCourseID}">
           Remove from this semester
         </button>
       `
@@ -74,9 +74,9 @@ async function addCourseOfSem() {
     } else {
       // Applies to all courses on the page that is not in the list (in "my courses" section)
       courses[i].lastChild.lastChild.insertAdjacentHTML(
-        "beforebegin",
+        "afterbegin",
         `
-        <button class="helper-extension helper-add-button" id="addCourse${currentCourseID}" >
+        <button class="btn btn-secondary helper-extension helper-add-button" id="addCourse${currentCourseID}" >
           Add to this semester
         </button>
       `
@@ -311,7 +311,7 @@ function LocateCourse(courseID, courses) {
 }
 
 function extractInfo(courseElement) {
-  title = courseElement.querySelector(".aalink").innerText;
+  title = courseElement.querySelector(".coursename").innerText;
   teachers = courseElement.querySelector(".teachers").innerText.slice(9);
   return { title: title, teachers: teachers };
 }
