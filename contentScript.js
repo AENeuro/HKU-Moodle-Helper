@@ -38,7 +38,7 @@ async function addCourseOfSem() {
     await browser.storage.sync.set({version: 2})
   }
   for (var i = 0; i < courses.length; i++) {
-    currentCourseID = courses[i].dataset.courseid;
+    const currentCourseID = courses[i].dataset.courseid;
     var included = false;
     if (courseList) {
       included = courseList
